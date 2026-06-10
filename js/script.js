@@ -5,7 +5,7 @@ const catalogData = [
     {
         title: "KENI K24 - HD",
         description: "Modèle KENI K24 - Collection Haute Définition",
-        image: "images/KENI K24 - HD-001.png"
+        image: "./images/KENI K24 - HD-001.png"
     },
     {
         title: "Produit 2",
