@@ -1,0 +1,559 @@
+/* ============================================
+   KENI Catalog Viewer - Premium Styling
+   Enhanced for luxury product showcase
+   ============================================ */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+/* Header - Premium Style */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    animation: fadeInDown 0.8s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #e94560, transparent);
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #e94560, transparent);
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #e94560 0%, #f39c12 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.tagline {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #b8c5d6;
+}
+
+/* Viewer Section */
+.viewer-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.viewer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* Navigation Buttons - Premium Design */
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(233, 69, 96, 0.4);
+    background: rgba(233, 69, 96, 0.1);
+    color: #e94560;
+    font-size: 26px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(233, 69, 96, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.nav-btn:hover {
+    background: rgba(233, 69, 96, 0.2);
+    border-color: rgba(233, 69, 96, 0.8);
+    transform: scale(1.12);
+    box-shadow: 0 0 25px rgba(233, 69, 96, 0.4);
+}
+
+.nav-btn:hover::before {
+    left: 100%;
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: rgba(233, 69, 96, 0.2);
+}
+
+/* Book Container */
+.book-container {
+    perspective: 1200px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.book {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5),
+                0 0 60px rgba(233, 69, 96, 0.2);
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(233, 69, 96, 0.1);
+}
+
+.book:hover {
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6),
+                0 0 80px rgba(233, 69, 96, 0.3);
+}
+
+/* Pages */
+.page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 40px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.page-left {
+    border-right: 2px solid #e94560;
+    box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.02);
+}
+
+.page-right {
+    border-left: 2px solid #e94560;
+    box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.02);
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.page-image {
+    max-width: 100%;
+    max-height: 75%;
+    object-fit: contain;
+    border-radius: 8px;
+    animation: fadeIn 0.6s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.page-image:hover {
+    transform: scale(1.02);
+}
+
+.page-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    text-align: center;
+    color: #555;
+    max-height: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-weight: 500;
+}
+
+.page-number {
+    position: absolute;
+    bottom: 15px;
+    font-size: 0.85rem;
+    color: #b8c5d6;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.left-page-number {
+    left: 30px;
+}
+
+.right-page-number {
+    right: 30px;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(233, 69, 96, 0.2);
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.page-jump {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+}
+
+.page-jump label {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+
+.page-jump input {
+    width: 70px;
+    padding: 10px 14px;
+    border: 2px solid rgba(233, 69, 96, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.page-jump input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #e94560;
+    box-shadow: 0 0 15px rgba(233, 69, 96, 0.3);
+}
+
+.page-jump input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.page-jump button {
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #e94560 0%, #f39c12 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.3);
+}
+
+.page-jump button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(233, 69, 96, 0.5);
+}
+
+.page-jump button:active {
+    transform: translateY(0);
+}
+
+.page-info {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.page-info strong {
+    font-weight: 800;
+    color: #f39c12;
+    margin: 0 3px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: auto;
+    padding-top: 30px;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(233, 69, 96, 0.2);
+}
+
+.footer p {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flipIn {
+    0% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+}
+
+@keyframes flipOut {
+    0% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotateY(-90deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .header {
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+    }
+
+    .viewer-wrapper {
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .book {
+        aspect-ratio: 4 / 5;
+    }
+
+    .page {
+        padding: 25px;
+    }
+
+    .page-image {
+        max-height: 60%;
+    }
+
+    .page-number {
+        font-size: 0.75rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .page-jump,
+    .page-info {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .page-jump input {
+        width: 60px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 12px 10px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+    }
+
+    .viewer-wrapper {
+        gap: 8px;
+    }
+
+    .nav-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+        border-width: 1px;
+    }
+
+    .page {
+        padding: 15px;
+    }
+
+    .page-content {
+        gap: 15px;
+    }
+
+    .page-image {
+        max-height: 50%;
+    }
+
+    .page-text {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 2;
+        max-height: 80px;
+    }
+
+    .controls {
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .page-jump {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .page-jump label {
+        font-size: 0.85rem;
+    }
+
+    .page-jump input,
+    .page-jump button {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(233, 69, 96, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #e94560, #f39c12);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #f39c12, #e94560);
+}
