@@ -3,9 +3,9 @@
 // Sample catalog data - Replace with your own product images
 const catalogData = [
     {
-        title: "Produit 1",
-        description: "Description du produit 1 - Qualité premium",
-        image: "https://via.placeholder.com/400x500?text=Produit+1"
+        title: "KENI K24 - HD",
+        description: "Modèle KENI K24 - Collection Haute Définition",
+        image: "images/KENI K24 - HD-001.png"
     },
     {
         title: "Produit 2",
