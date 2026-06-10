@@ -1,4 +1,4 @@
-// St Page Flip Integration - Essai Catalogue KENI
+// St Page Flip Integration - Catalogue KENI
 
 // Sample catalog data - Replace with your own product images
 const catalogData = [
@@ -32,7 +32,7 @@ const catalogData = [
 let pageFlip = null;
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Page chargée - Initialisation St Page Flip');
+    console.log('Page chargée - Initialisation');
     initializePageFlip();
     setupEventListeners();
 });
@@ -103,7 +103,7 @@ function createPages(container) {
         <div class="page-content">
             <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 30px;">Merci de votre visite</p>
             <p style="color: rgba(255,255,255,0.8); margin-bottom: 20px;">Visitez notre site web pour plus d'informations</p>
-            <p style="color: white; font-weight: bold;">www.keni-catalogue.com</p>
+            <p style="color: white; font-weight: bold;">https://www.keni-sa.com</p>
             <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-top: 40px;">&copy; 2026 KENI</p>
         </div>
     `;
@@ -173,5 +173,5 @@ function updatePageCounter() {
 }
 
 window.addEventListener('load', function() {
-    console.log('Toutes les ressources sont chargées - St Page Flip prêt');
+    console.log('Toutes les ressources sont chargées');
 });
